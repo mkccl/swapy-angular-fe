@@ -1,0 +1,13 @@
+<div #container class="container grid grid-cols-2 p-2 gap-2 w-full">
+  @for (element of elements; track element) {
+    <app-element [id]="element.id"
+                 [colorClass]="element.colorClass"
+                 class="h-52 bg-gray-300 rounded-lg"
+                 [class.col-span-2]="element.id <= 2"
+                 [class.col-span-1]="element.id > 2"
+                 [attr.data-swapy-slot]="element.id"
+                 [attr.data-vel-view]="'slot'">
+    </app-element>
+  }
+
+</div>
